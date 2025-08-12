@@ -29,6 +29,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow {
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
@@ -66,17 +75,37 @@
                 <div class="bg-slate-50 p-4 rounded-lg ring-1 ring-slate-200">
                     <div id="english-letter" class="text-slate-700 text-sm leading-relaxed whitespace-pre-wrap">To the Google Gemini Development Team,
 
-I am writing to you as a dedicated user of Gemini. While the platform's core capabilities are impressive, I must highlight a critical feature gap that is hindering its user experience and competitive standing: the inability to set custom icons for GEMs.
+As a creator who uses Gemini extensively and is deeply invested in the platform, I must highlight a critical gap that significantly impacts the platform's competitiveness and user stickiness: the inability to set custom icons for GEMs.
 
-This is not merely a "nice-to-have" feature; it is about achieving feature parity with your primary competitor. OpenAI's custom GPTs already offer this functionality, and this gap makes the GEMs ecosystem feel less mature and less appealing to serious creators.
+This is not merely about visual aesthetics; it's about the emotional connection between a user and their creation. Custom icons allow creators to give their GEMs a unique identity and brand presence, which in turn increases the GEM's visibility and usage frequency in their daily workflow.
 
-Lacking a basic customization feature that your competitor has offered for months can be a deciding factor for which platform a creator chooses to invest their time in.
+OpenAI's Custom GPTs have long offered this feature, enabling creators to easily establish a unique identity and interact with their audience, which has greatly increased their platform's stickiness. In contrast, GEMs currently lack this fundamental customization. This not only limits their potential for brand building but also risks losing creators to competitors due to this feature gap.
 
 Call to Action:
-To keep pace and ensure Gemini is perceived as a top-tier, creator-friendly platform, we strongly urge you to prioritize the implementation of custom icons for GEMs. This is a necessary step to close the competitive gap and provide the complete, polished experience that users now expect from a leading AI platform.
+For Gemini to become a platform where creators are willing to invest long-term and repeatedly return, implementing 'Custom Icons for GEMs' should be a top development priority. This isn't just about feature parity; it's a crucial step toward strengthening user identity and building long-term stickiness.
 
-Thank you for your attention to this urgent matter.</div>
+Thank you for your attention to this vital need.</div>
                     <button onclick="copyText('english-letter', this)" class="mt-4 w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">複製英文信件全文</button>
+                    
+                    <!-- Chinese Translation Toggle -->
+                    <details class="mt-4">
+                        <summary class="cursor-pointer text-sm text-slate-500 hover:text-slate-700 flex items-center justify-center">
+                            <span class="arrow transition-transform duration-200 mr-1">▶</span>
+                            點此展開中文翻譯
+                        </summary>
+                        <div class="mt-3 pt-3 border-t border-slate-200 text-slate-600 text-xs leading-relaxed whitespace-pre-wrap">致 Google Gemini 開發團隊：
+
+身為長期且深度使用 Gemini 的使用者，我必須指出一項對平台競爭力與使用者黏著度影響極大的缺口——目前 GEM 無法自訂圖示。
+
+這不是單純的視覺美化，而是關乎使用者與創作之間的情感連結。自訂圖示能讓創作者賦予 GEM 專屬的識別度與品牌感，進而增加 GEM 在使用者日常中的存在感與使用頻率。
+
+OpenAI 的 Custom GPT 早已提供此功能，使用者能輕鬆建立獨特形象並與受眾互動，這大幅提高了他們平台的黏著度。反觀目前的 GEM，缺乏這樣的基礎自訂能力，不僅在形象塑造上受限，也可能讓創作者因功能不足而轉向競爭對手。
+
+行動呼籲：
+若要讓 Gemini 成為使用者願意長期經營、並反覆回訪的平台，「GEM 自訂圖示」應被列為優先開發項目。這不只是功能補齊，而是強化使用者認同感、創造長期黏著度的關鍵一步。
+
+感謝你們對此重要需求的重視。</div>
+                    </details>
                 </div>
             </section>
         </main>
@@ -148,7 +177,3 @@ Thank you for your attention to this urgent matter.</div>
 
 </body>
 </html>
-
-
-
-
